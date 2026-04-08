@@ -823,6 +823,14 @@ function playSoftRustle(intensity) {
   s.start(); s.stop(audioCtx.currentTime + 0.08);
 }
 
+// ── Safe transition end (timeout fallback) ──
+function onTransitionEnd(el, cb) {
+  let done = false;
+  function handler() { if (done) return; done = true; el.removeEventListener('transitionend', handler); cb(); }
+  el.addEventListener('transitionend', handler);
+  setTimeout(handler, 700);
+}
+
 // ── Build pages ──
 function buildPages() {
   pages.forEach((p, i) => {
@@ -965,8 +973,7 @@ function onDragEnd(e) {
       playFlipSound();
       currentPage++;
 
-      dragPage.addEventListener('transitionend', function handler() {
-        dragPage.removeEventListener('transitionend', handler);
+      onTransitionEnd(dragPage, () => {
         dragPage.classList.remove('snap-complete');
         dragPage.classList.add('flipped');
         dragPage.style.zIndex = currentPage - 1;
@@ -978,8 +985,7 @@ function onDragEnd(e) {
       dragPage.classList.remove('dragging');
       dragPage.classList.add('snap-back');
       dragPage.style.transform = 'rotateY(0deg)';
-      dragPage.addEventListener('transitionend', function handler() {
-        dragPage.removeEventListener('transitionend', handler);
+      onTransitionEnd(dragPage, () => {
         dragPage.classList.remove('snap-back');
         dragPage.style.zIndex = pages.length - currentPage;
         dragPage = null;
@@ -996,8 +1002,7 @@ function onDragEnd(e) {
       playFlipSound();
       currentPage--;
 
-      dragPage.addEventListener('transitionend', function handler() {
-        dragPage.removeEventListener('transitionend', handler);
+      onTransitionEnd(dragPage, () => {
         dragPage.classList.remove('snap-complete', 'flipped');
         dragPage.style.zIndex = pages.length - currentPage;
         dragPage = null;
@@ -1008,8 +1013,7 @@ function onDragEnd(e) {
       dragPage.classList.remove('dragging');
       dragPage.classList.add('snap-back');
       dragPage.style.transform = 'rotateY(-180deg)';
-      dragPage.addEventListener('transitionend', function handler() {
-        dragPage.removeEventListener('transitionend', handler);
+      onTransitionEnd(dragPage, () => {
         dragPage.classList.remove('snap-back');
         dragPage.classList.add('flipped');
         dragPage.style.zIndex = currentPage - 1;
@@ -1038,8 +1042,7 @@ function nextPage() {
   pg.style.transform = 'rotateY(-180deg)';
   playFlipSound();
   currentPage++;
-  pg.addEventListener('transitionend', function handler() {
-    pg.removeEventListener('transitionend', handler);
+  onTransitionEnd(pg, () => {
     pg.classList.remove('snap-complete');
     pg.classList.add('flipped');
     updateView();
@@ -1056,8 +1059,7 @@ function prevPage() {
   pg.style.transform = 'rotateY(0deg)';
   playFlipSound();
   currentPage--;
-  pg.addEventListener('transitionend', function handler() {
-    pg.removeEventListener('transitionend', handler);
+  onTransitionEnd(pg, () => {
     pg.classList.remove('snap-complete');
     updateView();
   });

@@ -80,7 +80,7 @@ touch -t $(date +%Y%m%d)0000 /tmp/today_marker
 
 Сгенерировать HTML на основе шаблона (`index.html`), заменив массив `pages`.
 
-Путь вывода: `/tmp/claude/daily-flipbook/YYYY-MM-DD.html`
+Путь вывода: `~/cc-books/YYYY-MM-DD.html`
 
 Доступные CSS-классы:
 - `.page-title` — основной заголовок
@@ -93,10 +93,40 @@ touch -t $(date +%Y%m%d)0000 /tmp/today_marker
 - `.divider` — декоративная разделительная линия
 - `.dropcap` — буквица (`<p class="dropcap">`)
 
-### Step 5: Открыть в браузере
+### Step 5: Обновить books.json
+
+Прочитать `~/cc-books/books.json` и добавить запись о новой книге. Если запись с такой же датой уже есть — обновить её.
+
+Формат записи:
+```json
+{
+  "id": "MMDD",
+  "file": true,
+  "title": "DD месяца YYYY",
+  "date": "YYYY-MM-DD",
+  "day": "Пн/Вт/Ср/Чт/Пт/Сб/Вс",
+  "sessions": <количество сессий>,
+  "color": <0-15>,
+  "chapters": ["Название главы 1", "Название главы 2", ...],
+  "pages": [<массив объектов {front, back, leftContent} из Step 4>]
+}
+```
+
+**Новые записи добавлять в начало массива** (самые свежие сверху).
+
+### Step 6: Закоммитить и запушить
 
 ```bash
-open /tmp/claude/daily-flipbook/YYYY-MM-DD.html
+cd ~/cc-books
+git add YYYY-MM-DD.html books.json
+git commit -m "Книга за DD.MM.YYYY — N сессий"
+git push origin main
+```
+
+### Step 7: Открыть в браузере
+
+```bash
+open ~/cc-books/YYYY-MM-DD.html
 ```
 
 ## Пример вывода
