@@ -1,29 +1,315 @@
 [
-  {"id":"0405","file":true,"title":"5 апреля 2026","date":"2026-04-05","day":"Сб","sessions":9,"color":0,
-   "chapters":["Попробовал сделать FPS в браузере","Хочу визуализировать среду Claude Code","Создал FlipBook UI и выложил в Open Source","Проверка и обзор настроек VPS"],
-   "pages":[
-    {"front":"<div class=\"cover-front\" style=\"background:linear-gradient(145deg,#1a1520,#2a1f30,#1e1828,#0f0d14);\"><div class=\"cover-ornament\">&#9671; &#9671; &#9671;</div><div style=\"font-size:13px;color:#8a7050;letter-spacing:4px;margin-bottom:12px;\">DAILY FLIPBOOK</div><div class=\"cover-title\">5 апреля 2026</div><div class=\"cover-subtitle\">── Today I Learned ──</div><div style=\"width:80px;height:1px;background:linear-gradient(to right,transparent,#D97B2F,transparent);margin:24px 0;\"></div><div style=\"color:#b89868;font-size:13px;letter-spacing:2px;\">9 sessions / Saturday</div><div class=\"cover-ornament\">&#9671; &#9671; &#9671;</div></div>","back":"<div class=\"page-number\">ii</div><div style=\"flex:1;display:flex;flex-direction:column;justify-content:center;\"><p style=\"color:#8a7a68;font-size:14px;letter-spacing:3px;margin-bottom:16px;text-align:center;\">Итоги дня</p><div class=\"divider\" style=\"margin:10px 0;\">─</div><p style=\"color:#4a4038;font-size:15px;line-height:2.1;\">Сегодня день был насыщенным. Создал FPS-игру, продумал дашборд для визуализации среды Claude Code.</p><p style=\"color:#4a4038;font-size:15px;line-height:2.1;\">Главное достижение дня — <strong>FlipBook UI</strong>. Создал интерфейс книги с перелистыванием перетаскиванием и опубликовал как OSS на GitHub.</p></div>","leftContent":"<div class=\"cover-left\" style=\"background:linear-gradient(to right,#1e1828,#1a1520);\"><div class=\"spine-text\">5 апреля 2026 — записи</div></div>"},
-    {"front":"<div class=\"page-number\">1</div><div class=\"chapter-label\">Глава первая</div><div class=\"page-title\">Попробовал сделать<br>FPS в браузере</div><div class=\"divider\">&#9671; &#9671; &#9671;</div><div class=\"page-body\"><p class=\"dropcap\">В утренней сессии я дал задание: «Сделай FPS!». Используя навыки фронтенд-дизайна, была сгенерирована FPS-игра, работающая прямо в браузере.</p><p>Первая версия оказалась слишком тёмной, поэтому я дал фидбек: «Сделай реалистичнее, и слишком темно».</p><div class=\"quote\">«Вот это мощь!» — невольно воскликнул я. Генерация кода ИИ вышла на невероятный уровень.</div></div><div class=\"flip-hint\">Перетащите &#10148;</div>","back":"<div class=\"page-number\">2</div><div class=\"page-body\"><p>Сама игра не была целью — <strong>на самом деле хотелось проверить, что можно создать с помощью Claude Code</strong>.</p><div class=\"tip-box\"><div class=\"tip-title\">Выводы</div><ul><li>Не требуй идеала с первого результата. Сначала получи, потом улучшай фидбеком</li><li>ИИ хорошо воспринимает даже интуитивную обратную связь</li><li>Одними браузерными технологиями можно создать очень богатый опыт</li></ul></div></div>","leftContent":"<div class=\"page-number\">ii</div><div style=\"flex:1;display:flex;flex-direction:column;justify-content:center;\"><p style=\"color:#4a4038;font-size:15px;line-height:2.1;\">Главное достижение дня — <strong>FlipBook UI</strong>. Опубликовал как OSS на GitHub.</p></div>"},
-    {"front":"<div class=\"page-number\">3</div><div class=\"chapter-label\">Глава вторая</div><div class=\"page-title\">Создал FlipBook UI и<br>выложил в Open Source</div><div class=\"divider\">&#9671; &#9671; &#9671;</div><div class=\"page-body\"><p class=\"dropcap\">Главное событие дня. Всё началось с вопроса «Можешь сделать UI с перелистыванием книги?», а в итоге дошло до публикации на GitHub как OSS.</p><div class=\"timeline-item\">Базовая реализация перелистывания страниц на CSS 3D transforms</div><div class=\"timeline-item\">Перевод контента на японский и увеличение размера</div><div class=\"timeline-item\">Синтез звука перелистывания через Web Audio API</div><div class=\"timeline-item\">Реализация перетаскивания мышью с возможностью остановки</div><div class=\"timeline-item\">Публикация как OSS на GitHub</div></div><div class=\"flip-hint\">Перетащите &#10148;</div>","back":"<div class=\"page-number\">4</div><div class=\"page-body\"><p>Особенно интересной была реализация <strong>перелистывания перетаскиванием</strong>. Если угол больше 50 градусов — завершаем, если меньше — пружинный возврат.</p><div class=\"code-block\"><div class=\"code-label\">Ключевая часть</div><span class=\"keyword\">if</span> (absAngle > threshold) {\n  <span class=\"comment\">// Больше 50° → перелистывание завершено</span>\n  <span class=\"property\">playFlipSound</span>();\n} <span class=\"keyword\">else</span> {\n  <span class=\"comment\">// Пружинный возврат</span>\n}</div><p>Также создал скилл <code>/daily-flipbook</code>. Система автоматической генерации книги из логов сессий.</p><div class=\"divider\">&#9671; &ensp; &#9671; &ensp; &#9671;</div><p style=\"text-align:center;color:#D97B2F;font-size:14px;font-weight:700;\">ИИ — это не инструмент.<br>Это коллега.</p><div class=\"divider\">── FIN ──</div></div>","leftContent":"<div class=\"page-number\">2</div><div class=\"page-body\"><div class=\"tip-box\"><div class=\"tip-title\">Выводы</div><ul><li>Не требуй идеала с первого результата</li><li>ИИ воспринимает даже интуитивную обратную связь</li><li>Одними браузерными технологиями можно создать богатый опыт</li></ul></div></div>"}
-  ]},
-  {"id":"0404","file":true,"title":"4 апреля 2026","date":"2026-04-04","day":"Пт","sessions":25,"color":1,
-   "chapters":["День серьёзного обсуждения OSS-публикации","Две новые книжные идеи одновременно","Запустил Gemma 4 локально","Пятница на 25 сессий"],
-   "pages":[
-    {"front":"<div class=\"cover-front\" style=\"background:linear-gradient(145deg,#1a2030,#1e2a40,#162038,#0f1520);\"><div class=\"cover-ornament\">&#9671; &#9671; &#9671;</div><div style=\"font-size:13px;color:#5888b0;letter-spacing:4px;margin-bottom:12px;\">DAILY FLIPBOOK</div><div class=\"cover-title\" style=\"color:#8ab8e0;\">4 апреля 2026</div><div class=\"cover-subtitle\" style=\"color:#6090b0;\">── Today I Learned ──</div><div style=\"width:80px;height:1px;background:linear-gradient(to right,transparent,#5888b0,transparent);margin:24px 0;\"></div><div style=\"color:#6090b0;font-size:13px;letter-spacing:2px;\">25 sessions / Friday</div><div class=\"cover-ornament\" style=\"color:#5888b0;\">&#9671; &#9671; &#9671;</div></div>","back":"<div class=\"page-number\">ii</div><div style=\"flex:1;display:flex;flex-direction:column;justify-content:center;\"><p style=\"color:#8a7a68;font-size:14px;letter-spacing:3px;margin-bottom:16px;text-align:center;\">Итоги дня</p><div class=\"divider\" style=\"margin:10px 0;\">─</div><p style=\"color:#4a4038;font-size:15px;line-height:2.1;\">День с огромным количеством сессий. Обсуждение OSS-публикации, два новых книжных проекта, локальная установка Gemma 4.</p><p style=\"color:#4a4038;font-size:15px;line-height:2.1;\">Ключевое слово этого дня — <strong>«Делаем всё»</strong>.</p></div>","leftContent":"<div class=\"cover-left\" style=\"background:linear-gradient(to right,#162038,#1a2030);\"><div class=\"spine-text\">4 апреля 2026 — записи</div></div>"},
-    {"front":"<div class=\"page-number\">1</div><div class=\"chapter-label\">Глава первая</div><div class=\"page-title\">День серьёзного обсуждения<br>OSS-публикации</div><div class=\"divider\">&#9671; &#9671; &#9671;</div><div class=\"page-body\"><p class=\"dropcap\">«Думал выложить это в OSS» — решение выпустить свой инструмент в свет. Проверял в нескольких сессиях.</p><div class=\"quote\">Критерий для OSS: «То, что я хотел для себя, нужно ли другим?» Если ответ «Да» — публикуем.</div></div><div class=\"flip-hint\">Перетащите &#10148;</div>","back":"<div class=\"page-number\">2</div><div class=\"page-body\"><p>В итоге в этот день дело ограничилось обсуждением, а на следующий день (5 апреля) — публикация. <strong>Переспать с решением</strong> — важно.</p><div class=\"tip-box\"><div class=\"tip-title\">Чек-лист для OSS</div><ul><li>Нет ли конфиденциальной информации</li><li>Понятен ли README с первого взгляда</li><li>Указана ли лицензия</li><li>Мало ли зависимостей</li></ul></div></div>","leftContent":"<div class=\"page-number\">ii</div><div style=\"flex:1;display:flex;flex-direction:column;justify-content:center;\"><p style=\"color:#4a4038;font-size:15px;line-height:2.1;\">Ключевое слово этого дня — <strong>«Делаем всё»</strong>. 25 сессий.</p></div>"},
-    {"front":"<div class=\"page-number\">3</div><div class=\"chapter-label\">Глава вторая</div><div class=\"page-title\">Запустил Gemma 4<br>локально</div><div class=\"divider\">&#9671; &#9671; &#9671;</div><div class=\"page-body\"><p class=\"dropcap\">«Какая умная версия Gemma 4 потянет на этом Mac?» — момент, когда интерес к локальным LLM взорвался.</p><div class=\"code-block\"><span class=\"keyword\">ollama</span> pull gemma4:27b\n<span class=\"keyword\">ollama</span> pull gemma4:12b\n<span class=\"keyword\">ollama</span> run gemma4:27b <span class=\"string\">\"Hello\"</span></div><p>Для обработки данных, требующих конфиденциальности, или работы без интернета — вполне достаточно.</p></div><div class=\"flip-hint\">Перетащите &#10148;</div>","back":"<div class=\"page-number\">4</div><div class=\"page-body\"><div class=\"tip-box\"><div class=\"tip-title\">Выводы дня</div><ul><li>С OSS-публикацией лучше переспать ночь</li><li>Книжные проекты: после встречи Agent Team делает ресёрч → черновик за 30 минут</li><li>Локальные LLM подходят для обработки конфиденциальных данных</li><li>Все 25 сессий за день были осмысленной работой</li></ul></div><div class=\"divider\">&#9671; &ensp; &#9671; &ensp; &#9671;</div><p style=\"text-align:center;color:#5888b0;font-size:14px;font-weight:700;\">Когда хочется сделать слишком много,<br>поручи ИИ и сделай всё.</p><div class=\"divider\">── FIN ──</div></div>","leftContent":"<div class=\"page-number\">2</div><div class=\"page-body\"><p>В итоге в этот день дело ограничилось обсуждением, а на следующий день — публикация. <strong>Переспать с решением</strong> — важно.</p></div>"}
-  ]},
-  {"id":"0403","file":false,"title":"3 апреля 2026","date":"2026-04-03","day":"Чт","sessions":5,"color":2,"chapters":["Обзор встречи с Ямато Сёбо","Брейншторм структуры книги","Создание отчёта ИИ-консультанта","Доработка Slack-бота"],"pages":[]},
-  {"id":"0402","file":false,"title":"2 апреля 2026","date":"2026-04-02","day":"Ср","sessions":11,"color":3,"chapters":["Сдача 3 статей Tenbin AI","Настройка нового MCP-сервера","Дистилляция системы памяти","Автоматизация Discord Digest","Пакетная генерация счетов"],"pages":[]},
-  {"id":"0401","file":false,"title":"1 апреля 2026","date":"2026-04-01","day":"Вт","sessions":6,"color":4,"chapters":["Старт нового года","Подготовка к 1-на-1 с командой","Обновление учебных материалов","Тест автопубликации в note"],"pages":[]},
-  {"id":"0331","file":false,"title":"31 марта 2026","date":"2026-03-31","day":"Пн","sessions":8,"color":5,"chapters":["Создание отчёта за месяц","Улучшение пайплайна постов в X","Выставление счетов","Аудит безопасности VPS"],"pages":[]},
-  {"id":"0330","file":false,"title":"30 марта 2026","date":"2026-03-30","day":"Вс","sessions":4,"color":6,"chapters":["Доработка лендинга","Автоматизация деплоя на ConoHa","Сводка анализа конкурентов"],"pages":[]},
-  {"id":"0329","file":false,"title":"29 марта 2026","date":"2026-03-29","day":"Сб","sessions":6,"color":7,"chapters":["Анализ 200 вирусных постов","Исследование авторского стиля","Доработка Typefully CLI","Автоматизация видео→тред"],"pages":[]},
-  {"id":"0328","file":false,"title":"28 марта 2026","date":"2026-03-28","day":"Пт","sessions":9,"color":8,"chapters":["Написание серии статей","Черновик статьи","Обновление слайдов для обучения","Наведение порядка в Notion DB","Автообнаружение задач в Linear"],"pages":[]},
-  {"id":"0327","file":false,"title":"27 марта 2026","date":"2026-03-27","day":"Чт","sessions":7,"color":9,"chapters":["Подготовка к обучению","Обновление сборника промптов","Тест интеграции с Midjourney","Подготовка стрима для сообщества"],"pages":[]},
-  {"id":"0326","file":false,"title":"26 марта 2026","date":"2026-03-26","day":"Ср","sessions":5,"color":10,"chapters":["Фоллоу-ап с учебным заведением","Проверка документов на грант","Создание события на Peatix"],"pages":[]},
-  {"id":"0325","file":false,"title":"25 марта 2026","date":"2026-03-25","day":"Вт","sessions":10,"color":11,"chapters":["Проектирование Claude Code Memory v2","Реализация процесса дистилляции","Систематизация категорий обратной связи","Автообновление MEMORY.md"],"pages":[]},
-  {"id":"0324","file":false,"title":"24 марта 2026","date":"2026-03-24","day":"Пн","sessions":6,"color":12,"chapters":["Генерация еженедельного отчёта","Наведение порядка в уведомлениях Slack","Обработка протоколов tldv","Обновление управления партнёрами"],"pages":[]},
-  {"id":"0323","file":false,"title":"23 марта 2026","date":"2026-03-23","day":"Вс","sessions":3,"color":13,"chapters":["Бизнес-встреча","Проектирование распределения доходов","Брейншторм ценовой стратегии"],"pages":[]},
-  {"id":"0322","file":false,"title":"22 марта 2026","date":"2026-03-22","day":"Сб","sessions":8,"color":14,"chapters":["Анализ профиля стиля в X","Разбор 3 900 сообщений","Создание голосового профиля","Шаблонизация вирусных конструкций"],"pages":[]}
+  {
+    "id": "0407",
+    "file": true,
+    "title": "7 апреля 2026",
+    "date": "2026-04-07",
+    "day": "Вт",
+    "sessions": 4,
+    "color": 2,
+    "chapters": [
+      "Локализация open-source проекта",
+      "Скрипт для моушн-дизайнера",
+      "Контент-конвейер для Telegram",
+      "Сценарий демо-ролика"
+    ],
+    "pages": [
+      {
+        "front": "<div class=\"cover-front\" style=\"position:absolute;inset:0;padding:50px;border-radius:0 10px 10px 0;\">\n        <div class=\"cover-ornament\">&#9671; &#9671; &#9671;</div>\n        <div class=\"cover-icon\"><svg width=\"56\" height=\"56\" viewBox=\"0 0 56 56\" fill=\"none\"><rect x=\"4\" y=\"12\" width=\"48\" height=\"36\" rx=\"4\" stroke=\"#D9A76F\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"28\" y=\"35\" text-anchor=\"middle\" fill=\"#D9A76F\" font-family=\"monospace\" font-size=\"14\" font-weight=\"bold\">&gt;_</text><line x1=\"12\" y1=\"48\" x2=\"44\" y2=\"48\" stroke=\"#D9A76F\" stroke-width=\"1\" opacity=\"0.4\"/></svg></div>\n        <div class=\"cover-title\">7 апреля 2026</div>\n        <div class=\"cover-subtitle\">── Today I Learned ──</div>\n        <div style=\"width:80px;height:1px;background:linear-gradient(to right,transparent,#D97B2F,transparent);margin:24px 0;\"></div>\n        <div style=\"color:#b89868;font-size:13px;letter-spacing:2px;\">4 сессии / Вторник</div>\n        <div class=\"cover-ornament\">&#9671; &#9671; &#9671;</div>\n      </div>",
+        "back": "<div class=\"page-number\">ii</div>\n      <div style=\"flex:1;display:flex;flex-direction:column;justify-content:center;\">\n        <p style=\"color:#8a7a68;font-size:14px;letter-spacing:3px;margin-bottom:16px;text-align:center;\">Итоги дня</p>\n        <div class=\"divider\" style=\"margin:10px 0;\">─</div>\n        <p style=\"color:#4a4038;font-size:14.5px;line-height:2.1;\">Насыщенный день из 4 сессий. Главный проект — <strong>локализация open-source проекта</strong> и публикация на GitHub.</p>\n        <p style=\"color:#4a4038;font-size:14.5px;line-height:2.1;\">Параллельно: скрипт для <strong>моушн-дизайнера</strong>, посты для <strong>Telegram-канала</strong> и сценарий <strong>демо-ролика</strong>.</p>\n      </div>",
+        "leftContent": "<div class=\"cover-left\" style=\"width:calc(100% + 80px);height:calc(100% + 88px);margin:-44px -40px;display:flex;align-items:center;justify-content:center;\">\n        <div class=\"spine-text\">7 АПРЕЛЯ 2026 — ЗАПИСИ</div>\n      </div>"
+      },
+      {
+        "front": "<div class=\"page-number\">1</div>\n      <div class=\"chapter-label\">ГЛАВА ПЕРВАЯ</div>\n      <div class=\"page-title\">Локализация<br>open-source проекта</div>\n      <div class=\"divider\">&#9671; &#9671; &#9671;</div>\n      <div class=\"page-body\">\n        <p class=\"dropcap\">Взял open-source проект на японском и полностью переписал на русский. 8 файлов: HTML, JSON, Markdown, Shell-скрипты.</p>\n        <p>Запустил <strong>5 параллельных агентов</strong> — каждый переводил свой файл. Все работали одновременно.</p>\n        <div class=\"quote\">Параллельные агенты — это мощь. 8 файлов за раз, каждый агент автономен.</div>\n      </div>\n      <div class=\"flip-hint\">Перетащите &#10148;</div>",
+        "back": "<div class=\"page-number\">2</div>\n      <div class=\"page-body\">\n        <p>Публикация на GitHub. История коммитов тянула чужого контрибьютора — решение: <strong>orphan branch</strong>.</p>\n        <div class=\"code-block\">\n<span class=\"keyword\">git</span> checkout --orphan fresh\n<span class=\"keyword\">git</span> add -A && <span class=\"keyword\">git</span> commit\n<span class=\"keyword\">git</span> branch -M fresh main\n<span class=\"keyword\">git</span> push --force origin main\n        </div>\n        <div class=\"tip-box\">\n          <div class=\"tip-title\">Выводы</div>\n          <ul>\n            <li>Параллельные агенты для перевода — идеальный кейс</li>\n            <li>Orphan branch для чистой истории</li>\n            <li>Всегда grep-ом ищи следы оригинала</li>\n          </ul>\n        </div>\n      </div>",
+        "leftContent": "<div class=\"page-number\">ii</div>\n      <div style=\"flex:1;display:flex;flex-direction:column;justify-content:center;\">\n        <p style=\"color:#4a4038;font-size:14.5px;line-height:2.1;\">Главный проект — <strong>локализация open-source</strong> и публикация на GitHub.</p>\n      </div>"
+      },
+      {
+        "front": "<div class=\"page-number\">3</div>\n      <div class=\"chapter-label\">ГЛАВА ВТОРАЯ</div>\n      <div class=\"page-title\">Скрипт для<br>моушн-дизайнера</div>\n      <div class=\"divider\">&#9671; &#9671; &#9671;</div>\n      <div class=\"page-body\">\n        <p class=\"dropcap\">Подробный бриф для рекламного ролика SaaS-сервиса: что на экране, какие переходы, тайминги.</p>\n        <p>Изучили лендинг через <strong>Playwright MCP</strong>: скриншоты экранов, анализ блоков, навигация.</p>\n        <p>Параллельно — серия рекламных постов для Telegram с анализом стиля целевого канала.</p>\n      </div>\n      <div class=\"flip-hint\">Перетащите &#10148;</div>",
+        "back": "<div class=\"page-number\">4</div>\n      <div class=\"page-body\">\n        <p>Claude путал два продукта при написании постов. Пришлось явно указывать контекст.</p>\n        <div class=\"quote\">Когда работаешь с несколькими проектами, AI смешивает контекст. Называй продукт явно.</div>\n        <div class=\"tip-box\">\n          <div class=\"tip-title\">Выводы</div>\n          <ul>\n            <li>Playwright MCP — для аудита лендингов</li>\n            <li>Анализируй стиль канала перед постом</li>\n            <li>Разделяй контекст между проектами</li>\n          </ul>\n        </div>\n      </div>",
+        "leftContent": "<div class=\"page-number\">2</div>\n      <div class=\"page-body\">\n        <p>Orphan branch — чистая история с нуля.</p>\n        <div class=\"tip-box\">\n          <div class=\"tip-title\">Выводы</div>\n          <ul>\n            <li>Параллельные агенты для перевода</li>\n            <li>Grep-ом ищи следы оригинала</li>\n          </ul>\n        </div>\n      </div>"
+      },
+      {
+        "front": "<div class=\"page-number\">5</div>\n      <div class=\"chapter-label\">ГЛАВА ТРЕТЬЯ</div>\n      <div class=\"page-title\">Контент-конвейер<br>для Telegram</div>\n      <div class=\"divider\">&#9671; &#9671; &#9671;</div>\n      <div class=\"page-body\">\n        <p class=\"dropcap\">Начали с изучения правил канала: стиль, примеры, тон. Потом — серия постов:</p>\n        <div class=\"timeline-item\" style=\"padding:6px 0 6px 18px;border-left:2px solid rgba(217,123,47,0.2);margin:4px 0;font-size:13px;line-height:1.6;\">Рекламная интеграция для AI-канала</div>\n        <div class=\"timeline-item\" style=\"padding:6px 0 6px 18px;border-left:2px solid rgba(217,123,47,0.2);margin:4px 0;font-size:13px;line-height:1.6;\">Обзор новых фич Claude Code</div>\n        <div class=\"timeline-item\" style=\"padding:6px 0 6px 18px;border-left:2px solid rgba(217,123,47,0.2);margin:4px 0;font-size:13px;line-height:1.6;\">Разбор open-source навыка</div>\n        <div class=\"timeline-item\" style=\"padding:6px 0 6px 18px;border-left:2px solid rgba(217,123,47,0.2);margin:4px 0;font-size:13px;line-height:1.6;\">Пост про Remote Control</div>\n      </div>\n      <div class=\"flip-hint\">Перетащите &#10148;</div>",
+        "back": "<div class=\"page-number\">6</div>\n      <div class=\"page-body\">\n        <p>Разбор фичи, которой сам не пользуешься — <strong>честный разбор</strong>, а не хайп.</p>\n        <div class=\"comparison\">\n          <div class=\"col bad\">\n            <div class=\"col-label\">НЕ ТАК</div>\n            Пересказывать маркетинг\n          </div>\n          <div class=\"col good\">\n            <div class=\"col-label\">А ТАК</div>\n            Личный опыт + честная позиция\n          </div>\n        </div>\n        <div class=\"tip-box\">\n          <div class=\"tip-title\">Выводы</div>\n          <ul>\n            <li>Сначала изучи правила канала</li>\n            <li>Честность ценнее восторга</li>\n          </ul>\n        </div>\n      </div>",
+        "leftContent": "<div class=\"page-number\">4</div>\n      <div class=\"page-body\">\n        <p>AI смешивает контекст между проектами.</p>\n        <div class=\"tip-box\">\n          <div class=\"tip-title\">Выводы</div>\n          <ul>\n            <li>Playwright MCP для лендингов</li>\n            <li>Разделяй контекст</li>\n          </ul>\n        </div>\n      </div>"
+      },
+      {
+        "front": "<div class=\"page-number\">7</div>\n      <div class=\"chapter-label\">ГЛАВА ЧЕТВЁРТАЯ</div>\n      <div class=\"page-title\">Сценарий<br>демо-ролика</div>\n      <div class=\"divider\">&#9671; &#9671; &#9671;</div>\n      <div class=\"page-body\">\n        <p class=\"dropcap\">Сценарий ежемесячного демо-ролика для SaaS. Скрипт должен звучать как живой человек, не как буклет.</p>\n        <div class=\"quote\">Скрипт для озвучки и скрипт для текста — разные вещи. Живая речь короче, с паузами.</div>\n        <p>Создали базу знаний о продукте, шаблон сценария и покадровый план.</p>\n      </div>\n      <div class=\"flip-hint\">Перетащите &#10148;</div>",
+        "back": "<div class=\"page-number\">8</div>\n      <div class=\"page-body\">\n        <p>Раскрыли «внутрянку» — не «мы делаем X», а как работает обучение, анализ, подбор.</p>\n        <div class=\"code-block\">\n          <div class=\"code-label\">Структура</div>\n<span class=\"property\">video-demos/</span>\n├── <span class=\"property\">scenarios/</span>   <span class=\"comment\"># Сценарии</span>\n├── <span class=\"property\">assets/</span>      <span class=\"comment\"># База знаний</span>\n└── <span class=\"property\">CLAUDE.md</span>    <span class=\"comment\"># Правила</span>\n        </div>\n        <div class=\"divider\">&#9671; &ensp; &#9671; &ensp; &#9671;</div>\n        <p style=\"text-align:center;color:#D97B2F;font-size:14px;font-weight:700;\">4 задачи. 4 сессии.<br>Ни одной минуты впустую.</p>\n        <div class=\"divider\">── FIN ──</div>\n      </div>",
+        "leftContent": "<div class=\"page-number\">6</div>\n      <div class=\"page-body\">\n        <p>Честность ценнее восторга.</p>\n        <div class=\"tip-box\">\n          <div class=\"tip-title\">Выводы</div>\n          <ul>\n            <li>Изучи правила канала</li>\n            <li>Один хороший пост лучше пяти</li>\n          </ul>\n        </div>\n      </div>"
+      }
+    ]
+  },
+  {
+    "id": "0405",
+    "file": true,
+    "title": "5 апреля 2026",
+    "date": "2026-04-05",
+    "day": "Сб",
+    "sessions": 9,
+    "color": 0,
+    "chapters": [
+      "Попробовал сделать FPS в браузере",
+      "Хочу визуализировать среду Claude Code",
+      "Создал FlipBook UI и выложил в Open Source",
+      "Проверка и обзор настроек VPS"
+    ],
+    "pages": [
+      {
+        "front": "<div class=\"cover-front\" style=\"background:linear-gradient(145deg,#1a1520,#2a1f30,#1e1828,#0f0d14);\"><div class=\"cover-ornament\">&#9671; &#9671; &#9671;</div><div style=\"font-size:13px;color:#8a7050;letter-spacing:4px;margin-bottom:12px;\">DAILY FLIPBOOK</div><div class=\"cover-title\">5 апреля 2026</div><div class=\"cover-subtitle\">── Today I Learned ──</div><div style=\"width:80px;height:1px;background:linear-gradient(to right,transparent,#D97B2F,transparent);margin:24px 0;\"></div><div style=\"color:#b89868;font-size:13px;letter-spacing:2px;\">9 sessions / Saturday</div><div class=\"cover-ornament\">&#9671; &#9671; &#9671;</div></div>",
+        "back": "<div class=\"page-number\">ii</div><div style=\"flex:1;display:flex;flex-direction:column;justify-content:center;\"><p style=\"color:#8a7a68;font-size:14px;letter-spacing:3px;margin-bottom:16px;text-align:center;\">Итоги дня</p><div class=\"divider\" style=\"margin:10px 0;\">─</div><p style=\"color:#4a4038;font-size:15px;line-height:2.1;\">Сегодня день был насыщенным. Создал FPS-игру, продумал дашборд для визуализации среды Claude Code.</p><p style=\"color:#4a4038;font-size:15px;line-height:2.1;\">Главное достижение дня — <strong>FlipBook UI</strong>. Создал интерфейс книги с перелистыванием перетаскиванием и опубликовал как OSS на GitHub.</p></div>",
+        "leftContent": "<div class=\"cover-left\" style=\"background:linear-gradient(to right,#1e1828,#1a1520);\"><div class=\"spine-text\">5 апреля 2026 — записи</div></div>"
+      },
+      {
+        "front": "<div class=\"page-number\">1</div><div class=\"chapter-label\">Глава первая</div><div class=\"page-title\">Попробовал сделать<br>FPS в браузере</div><div class=\"divider\">&#9671; &#9671; &#9671;</div><div class=\"page-body\"><p class=\"dropcap\">В утренней сессии я дал задание: «Сделай FPS!». Используя навыки фронтенд-дизайна, была сгенерирована FPS-игра, работающая прямо в браузере.</p><p>Первая версия оказалась слишком тёмной, поэтому я дал фидбек: «Сделай реалистичнее, и слишком темно».</p><div class=\"quote\">«Вот это мощь!» — невольно воскликнул я. Генерация кода ИИ вышла на невероятный уровень.</div></div><div class=\"flip-hint\">Перетащите &#10148;</div>",
+        "back": "<div class=\"page-number\">2</div><div class=\"page-body\"><p>Сама игра не была целью — <strong>на самом деле хотелось проверить, что можно создать с помощью Claude Code</strong>.</p><div class=\"tip-box\"><div class=\"tip-title\">Выводы</div><ul><li>Не требуй идеала с первого результата. Сначала получи, потом улучшай фидбеком</li><li>ИИ хорошо воспринимает даже интуитивную обратную связь</li><li>Одними браузерными технологиями можно создать очень богатый опыт</li></ul></div></div>",
+        "leftContent": "<div class=\"page-number\">ii</div><div style=\"flex:1;display:flex;flex-direction:column;justify-content:center;\"><p style=\"color:#4a4038;font-size:15px;line-height:2.1;\">Главное достижение дня — <strong>FlipBook UI</strong>. Опубликовал как OSS на GitHub.</p></div>"
+      },
+      {
+        "front": "<div class=\"page-number\">3</div><div class=\"chapter-label\">Глава вторая</div><div class=\"page-title\">Создал FlipBook UI и<br>выложил в Open Source</div><div class=\"divider\">&#9671; &#9671; &#9671;</div><div class=\"page-body\"><p class=\"dropcap\">Главное событие дня. Всё началось с вопроса «Можешь сделать UI с перелистыванием книги?», а в итоге дошло до публикации на GitHub как OSS.</p><div class=\"timeline-item\">Базовая реализация перелистывания страниц на CSS 3D transforms</div><div class=\"timeline-item\">Перевод контента на японский и увеличение размера</div><div class=\"timeline-item\">Синтез звука перелистывания через Web Audio API</div><div class=\"timeline-item\">Реализация перетаскивания мышью с возможностью остановки</div><div class=\"timeline-item\">Публикация как OSS на GitHub</div></div><div class=\"flip-hint\">Перетащите &#10148;</div>",
+        "back": "<div class=\"page-number\">4</div><div class=\"page-body\"><p>Особенно интересной была реализация <strong>перелистывания перетаскиванием</strong>. Если угол больше 50 градусов — завершаем, если меньше — пружинный возврат.</p><div class=\"code-block\"><div class=\"code-label\">Ключевая часть</div><span class=\"keyword\">if</span> (absAngle > threshold) {\n  <span class=\"comment\">// Больше 50° → перелистывание завершено</span>\n  <span class=\"property\">playFlipSound</span>();\n} <span class=\"keyword\">else</span> {\n  <span class=\"comment\">// Пружинный возврат</span>\n}</div><p>Также создал скилл <code>/daily-flipbook</code>. Система автоматической генерации книги из логов сессий.</p><div class=\"divider\">&#9671; &ensp; &#9671; &ensp; &#9671;</div><p style=\"text-align:center;color:#D97B2F;font-size:14px;font-weight:700;\">ИИ — это не инструмент.<br>Это коллега.</p><div class=\"divider\">── FIN ──</div></div>",
+        "leftContent": "<div class=\"page-number\">2</div><div class=\"page-body\"><div class=\"tip-box\"><div class=\"tip-title\">Выводы</div><ul><li>Не требуй идеала с первого результата</li><li>ИИ воспринимает даже интуитивную обратную связь</li><li>Одними браузерными технологиями можно создать богатый опыт</li></ul></div></div>"
+      }
+    ]
+  },
+  {
+    "id": "0404",
+    "file": true,
+    "title": "4 апреля 2026",
+    "date": "2026-04-04",
+    "day": "Пт",
+    "sessions": 25,
+    "color": 1,
+    "chapters": [
+      "День серьёзного обсуждения OSS-публикации",
+      "Две новые книжные идеи одновременно",
+      "Запустил Gemma 4 локально",
+      "Пятница на 25 сессий"
+    ],
+    "pages": [
+      {
+        "front": "<div class=\"cover-front\" style=\"background:linear-gradient(145deg,#1a2030,#1e2a40,#162038,#0f1520);\"><div class=\"cover-ornament\">&#9671; &#9671; &#9671;</div><div style=\"font-size:13px;color:#5888b0;letter-spacing:4px;margin-bottom:12px;\">DAILY FLIPBOOK</div><div class=\"cover-title\" style=\"color:#8ab8e0;\">4 апреля 2026</div><div class=\"cover-subtitle\" style=\"color:#6090b0;\">── Today I Learned ──</div><div style=\"width:80px;height:1px;background:linear-gradient(to right,transparent,#5888b0,transparent);margin:24px 0;\"></div><div style=\"color:#6090b0;font-size:13px;letter-spacing:2px;\">25 sessions / Friday</div><div class=\"cover-ornament\" style=\"color:#5888b0;\">&#9671; &#9671; &#9671;</div></div>",
+        "back": "<div class=\"page-number\">ii</div><div style=\"flex:1;display:flex;flex-direction:column;justify-content:center;\"><p style=\"color:#8a7a68;font-size:14px;letter-spacing:3px;margin-bottom:16px;text-align:center;\">Итоги дня</p><div class=\"divider\" style=\"margin:10px 0;\">─</div><p style=\"color:#4a4038;font-size:15px;line-height:2.1;\">День с огромным количеством сессий. Обсуждение OSS-публикации, два новых книжных проекта, локальная установка Gemma 4.</p><p style=\"color:#4a4038;font-size:15px;line-height:2.1;\">Ключевое слово этого дня — <strong>«Делаем всё»</strong>.</p></div>",
+        "leftContent": "<div class=\"cover-left\" style=\"background:linear-gradient(to right,#162038,#1a2030);\"><div class=\"spine-text\">4 апреля 2026 — записи</div></div>"
+      },
+      {
+        "front": "<div class=\"page-number\">1</div><div class=\"chapter-label\">Глава первая</div><div class=\"page-title\">День серьёзного обсуждения<br>OSS-публикации</div><div class=\"divider\">&#9671; &#9671; &#9671;</div><div class=\"page-body\"><p class=\"dropcap\">«Думал выложить это в OSS» — решение выпустить свой инструмент в свет. Проверял в нескольких сессиях.</p><div class=\"quote\">Критерий для OSS: «То, что я хотел для себя, нужно ли другим?» Если ответ «Да» — публикуем.</div></div><div class=\"flip-hint\">Перетащите &#10148;</div>",
+        "back": "<div class=\"page-number\">2</div><div class=\"page-body\"><p>В итоге в этот день дело ограничилось обсуждением, а на следующий день (5 апреля) — публикация. <strong>Переспать с решением</strong> — важно.</p><div class=\"tip-box\"><div class=\"tip-title\">Чек-лист для OSS</div><ul><li>Нет ли конфиденциальной информации</li><li>Понятен ли README с первого взгляда</li><li>Указана ли лицензия</li><li>Мало ли зависимостей</li></ul></div></div>",
+        "leftContent": "<div class=\"page-number\">ii</div><div style=\"flex:1;display:flex;flex-direction:column;justify-content:center;\"><p style=\"color:#4a4038;font-size:15px;line-height:2.1;\">Ключевое слово этого дня — <strong>«Делаем всё»</strong>. 25 сессий.</p></div>"
+      },
+      {
+        "front": "<div class=\"page-number\">3</div><div class=\"chapter-label\">Глава вторая</div><div class=\"page-title\">Запустил Gemma 4<br>локально</div><div class=\"divider\">&#9671; &#9671; &#9671;</div><div class=\"page-body\"><p class=\"dropcap\">«Какая умная версия Gemma 4 потянет на этом Mac?» — момент, когда интерес к локальным LLM взорвался.</p><div class=\"code-block\"><span class=\"keyword\">ollama</span> pull gemma4:27b\n<span class=\"keyword\">ollama</span> pull gemma4:12b\n<span class=\"keyword\">ollama</span> run gemma4:27b <span class=\"string\">\"Hello\"</span></div><p>Для обработки данных, требующих конфиденциальности, или работы без интернета — вполне достаточно.</p></div><div class=\"flip-hint\">Перетащите &#10148;</div>",
+        "back": "<div class=\"page-number\">4</div><div class=\"page-body\"><div class=\"tip-box\"><div class=\"tip-title\">Выводы дня</div><ul><li>С OSS-публикацией лучше переспать ночь</li><li>Книжные проекты: после встречи Agent Team делает ресёрч → черновик за 30 минут</li><li>Локальные LLM подходят для обработки конфиденциальных данных</li><li>Все 25 сессий за день были осмысленной работой</li></ul></div><div class=\"divider\">&#9671; &ensp; &#9671; &ensp; &#9671;</div><p style=\"text-align:center;color:#5888b0;font-size:14px;font-weight:700;\">Когда хочется сделать слишком много,<br>поручи ИИ и сделай всё.</p><div class=\"divider\">── FIN ──</div></div>",
+        "leftContent": "<div class=\"page-number\">2</div><div class=\"page-body\"><p>В итоге в этот день дело ограничилось обсуждением, а на следующий день — публикация. <strong>Переспать с решением</strong> — важно.</p></div>"
+      }
+    ]
+  },
+  {
+    "id": "0403",
+    "file": false,
+    "title": "3 апреля 2026",
+    "date": "2026-04-03",
+    "day": "Чт",
+    "sessions": 5,
+    "color": 2,
+    "chapters": [
+      "Обзор встречи с Ямато Сёбо",
+      "Брейншторм структуры книги",
+      "Создание отчёта ИИ-консультанта",
+      "Доработка Slack-бота"
+    ],
+    "pages": []
+  },
+  {
+    "id": "0402",
+    "file": false,
+    "title": "2 апреля 2026",
+    "date": "2026-04-02",
+    "day": "Ср",
+    "sessions": 11,
+    "color": 3,
+    "chapters": [
+      "Сдача 3 статей Tenbin AI",
+      "Настройка нового MCP-сервера",
+      "Дистилляция системы памяти",
+      "Автоматизация Discord Digest",
+      "Пакетная генерация счетов"
+    ],
+    "pages": []
+  },
+  {
+    "id": "0401",
+    "file": false,
+    "title": "1 апреля 2026",
+    "date": "2026-04-01",
+    "day": "Вт",
+    "sessions": 6,
+    "color": 4,
+    "chapters": [
+      "Старт нового года",
+      "Подготовка к 1-на-1 с командой",
+      "Обновление учебных материалов",
+      "Тест автопубликации в note"
+    ],
+    "pages": []
+  },
+  {
+    "id": "0331",
+    "file": false,
+    "title": "31 марта 2026",
+    "date": "2026-03-31",
+    "day": "Пн",
+    "sessions": 8,
+    "color": 5,
+    "chapters": [
+      "Создание отчёта за месяц",
+      "Улучшение пайплайна постов в X",
+      "Выставление счетов",
+      "Аудит безопасности VPS"
+    ],
+    "pages": []
+  },
+  {
+    "id": "0330",
+    "file": false,
+    "title": "30 марта 2026",
+    "date": "2026-03-30",
+    "day": "Вс",
+    "sessions": 4,
+    "color": 6,
+    "chapters": [
+      "Доработка лендинга",
+      "Автоматизация деплоя на ConoHa",
+      "Сводка анализа конкурентов"
+    ],
+    "pages": []
+  },
+  {
+    "id": "0329",
+    "file": false,
+    "title": "29 марта 2026",
+    "date": "2026-03-29",
+    "day": "Сб",
+    "sessions": 6,
+    "color": 7,
+    "chapters": [
+      "Анализ 200 вирусных постов",
+      "Исследование авторского стиля",
+      "Доработка Typefully CLI",
+      "Автоматизация видео→тред"
+    ],
+    "pages": []
+  },
+  {
+    "id": "0328",
+    "file": false,
+    "title": "28 марта 2026",
+    "date": "2026-03-28",
+    "day": "Пт",
+    "sessions": 9,
+    "color": 8,
+    "chapters": [
+      "Написание серии статей",
+      "Черновик статьи",
+      "Обновление слайдов для обучения",
+      "Наведение порядка в Notion DB",
+      "Автообнаружение задач в Linear"
+    ],
+    "pages": []
+  },
+  {
+    "id": "0327",
+    "file": false,
+    "title": "27 марта 2026",
+    "date": "2026-03-27",
+    "day": "Чт",
+    "sessions": 7,
+    "color": 9,
+    "chapters": [
+      "Подготовка к обучению",
+      "Обновление сборника промптов",
+      "Тест интеграции с Midjourney",
+      "Подготовка стрима для сообщества"
+    ],
+    "pages": []
+  },
+  {
+    "id": "0326",
+    "file": false,
+    "title": "26 марта 2026",
+    "date": "2026-03-26",
+    "day": "Ср",
+    "sessions": 5,
+    "color": 10,
+    "chapters": [
+      "Фоллоу-ап с учебным заведением",
+      "Проверка документов на грант",
+      "Создание события на Peatix"
+    ],
+    "pages": []
+  },
+  {
+    "id": "0325",
+    "file": false,
+    "title": "25 марта 2026",
+    "date": "2026-03-25",
+    "day": "Вт",
+    "sessions": 10,
+    "color": 11,
+    "chapters": [
+      "Проектирование Claude Code Memory v2",
+      "Реализация процесса дистилляции",
+      "Систематизация категорий обратной связи",
+      "Автообновление MEMORY.md"
+    ],
+    "pages": []
+  },
+  {
+    "id": "0324",
+    "file": false,
+    "title": "24 марта 2026",
+    "date": "2026-03-24",
+    "day": "Пн",
+    "sessions": 6,
+    "color": 12,
+    "chapters": [
+      "Генерация еженедельного отчёта",
+      "Наведение порядка в уведомлениях Slack",
+      "Обработка протоколов tldv",
+      "Обновление управления партнёрами"
+    ],
+    "pages": []
+  },
+  {
+    "id": "0323",
+    "file": false,
+    "title": "23 марта 2026",
+    "date": "2026-03-23",
+    "day": "Вс",
+    "sessions": 3,
+    "color": 13,
+    "chapters": [
+      "Бизнес-встреча",
+      "Проектирование распределения доходов",
+      "Брейншторм ценовой стратегии"
+    ],
+    "pages": []
+  },
+  {
+    "id": "0322",
+    "file": false,
+    "title": "22 марта 2026",
+    "date": "2026-03-22",
+    "day": "Сб",
+    "sessions": 8,
+    "color": 14,
+    "chapters": [
+      "Анализ профиля стиля в X",
+      "Разбор 3 900 сообщений",
+      "Создание голосового профиля",
+      "Шаблонизация вирусных конструкций"
+    ],
+    "pages": []
+  }
 ]
